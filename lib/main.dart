@@ -12,9 +12,39 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       title: title,
       home: MyHomePage(title: title),
+      // TODO: 
+      /*
+        Add routes to navigate between screens      
+       */
     );
   }
 }
+
+/*
+class TabBarDemo extends StatelessWidget {
+  const TabBarDemo({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: DefaultTabController(
+        length: 3,
+        child: Scaffold(
+          appBar: AppBar(
+            bottom: const TabBar(
+              tabs: [
+                Tab(icon: Icon(Icons.home)),
+                Tab(icon: Icon(Icons.gps_fixed)),
+                Tab(icon: Icon(Icons.account_circle)),
+              ],
+            ),
+            title: const Text('Tabs Demo'),
+          ),
+        ),
+      ),
+    );
+  }
+}*/
 
 class MyHomePage extends StatelessWidget {
   final String title;
@@ -43,7 +73,8 @@ class MyButton extends StatelessWidget {
     return GestureDetector(
       // When the child is tapped, show a snackbar.
       onTap: () {
-        const snackBar = SnackBar(content: Text('Respuesta al presionar el botón'));
+        const snackBar =
+            SnackBar(content: Text('Respuesta al presionar el botón'));
 
         ScaffoldMessenger.of(context).showSnackBar(snackBar);
       },
