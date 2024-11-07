@@ -1,3 +1,5 @@
+
+import 'package:appbutton/config/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(const MyApp());
@@ -9,9 +11,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     const title = 'Gesture tap';
 
-    return const MaterialApp(
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: AppTheme().theme(),
       title: title,
-      home: MyHomePage(title: title),
+      home: const MyHomePage(title: title),
+      
       // TODO: 
       /*
         Add routes to navigate between screens      
